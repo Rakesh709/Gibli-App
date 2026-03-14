@@ -19,7 +19,7 @@ public class GhibliArtService {
 
     public byte[]  createGhibliArt(MultipartFile image, String prompt){
         String finalPrompt = prompt + ",in the beautiful, detailed anime style of studio ghibli ";
-        String engineId = "stable-diffusion-v1-v6";
+        String engineId = "stable-diffusion-xl-1024-v1-0";
         String stylePreset ="anime";
 
        return stabilityAIClient.generateImageFromImage(
@@ -33,7 +33,7 @@ public class GhibliArtService {
 
     public byte[]  createGhibliArtFromText( String prompt, String style){
         String finalPrompt = prompt + ",in the beautiful, detailed anime style of studio ghibli ";
-        String engineId = "stable-diffusion-v1-v6";
+        String engineId = "stable-diffusion-xl-1024-v1-0";
         String stylePreset = style.equals("general") ? "anime" : style.replace("_","-");
 
         TextToImageRequest requestPayload = new TextToImageRequest(finalPrompt,stylePreset);
