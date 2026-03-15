@@ -7,7 +7,7 @@ public class TextToImageRequest {
     private double cfg_scale=7;
     private int height=512;
     private int width=768;
-    private int sample=1;
+    private int samples=1;
     private int steps=30;
     private String style_preset;
 
@@ -56,7 +56,7 @@ public class TextToImageRequest {
     }
 
     public int getSample() {
-        return sample;
+        return samples;
     }
 
     public String getStyle_preset() {

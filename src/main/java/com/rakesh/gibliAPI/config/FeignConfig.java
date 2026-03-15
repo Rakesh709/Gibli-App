@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class FeignConfig {
 
     @Bean
-    public Encoder SpringFormEncoder(){
+    public Encoder encoder(){
         return new SpringFormEncoder();
 //        return new SpringFormEncoder(
 //                new SpringEncoder(() -> new HttpMessageConverters(new RestTemplate().getMessageConverters()))

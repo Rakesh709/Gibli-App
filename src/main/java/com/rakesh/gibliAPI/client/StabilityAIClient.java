@@ -17,7 +17,7 @@ public interface StabilityAIClient {
     @PostMapping(
             value = "/v1/generation/{engine_id}/text-to-image",
             consumes = MediaType.APPLICATION_JSON_VALUE,
-            headers = {"Accept=image/png"}
+            produces = MediaType.IMAGE_PNG_VALUE
 
     )
     byte[] generateImageFromText(
